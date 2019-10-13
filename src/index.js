@@ -3,6 +3,7 @@ const fs = require('fs');
 const github = require('@actions/github');
 const core = require('@actions/core');
 const app = require("@octokit/app");
+const { GITHUB_SHA, GITHUB_EVENT_PATH, GITHUB_TOKEN, GITHUB_WORKSPACE } = process.env
 
 const InspectionParser = require('./InspectionParser');
 
@@ -29,6 +30,11 @@ async function run() {
     // The YML workflow will need to set myToken with the GitHub Secret Token
     // myToken: ${{ secrets.GITHUB_TOKEN }
     // https://help.github.com/en/articles/virtual-environments-for-github-actions#github_token-secret
+    console.log(GITHUB_SHA);
+    console.log(GITHUB_EVENT_PATH);
+    console.log(GITHUB_TOKEN);
+    console.log(GITHUB_WORKSPACE);
+
     const myToken = core.getInput('myToken');
     const octokit = new github.GitHub(myToken);
 
