@@ -15,7 +15,7 @@ if (!fs.existsSync(path)) {
     console.log("directory doesn't exist");
     process.exit();
 }
-await exec.exec('/home/ijinspector/idea-IC/bin/inspect.sh . ./Default.xml . -d . -v2');
+exec.exec("/home/ijinspector/idea-IC/bin/inspect.sh . ./Default.xml . -d . -v2")
 const parser = new InspectionParser();
 
 fs.readdir(dir, function (err, files) { if (err) throw err;
