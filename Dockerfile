@@ -59,4 +59,4 @@ WORKDIR /home/ijinspector/idea-project-tmprw
 USER root
 COPY entrypoint.sh /
 
-ENTRYPOINT ["bash"]
+ENTRYPOINT ["/entrypoint.sh"]
