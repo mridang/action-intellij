@@ -49,6 +49,11 @@ RUN chmod -R 777 /etc/idea
 #switch to root to launch the entrypoint. it will use gosu to drop down to ijinspector
 USER root
 COPY entrypoint.sh /
-COPY src /script
 
+COPY       src /script
+WORKDIR    /script
+RUN        npm install
+
+
+WORKDIR    /home/ijinspector
 ENTRYPOINT ["/entrypoint.sh"]
