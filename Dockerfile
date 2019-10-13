@@ -14,7 +14,7 @@ RUN apt-get update \
  && gosu nobody true \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
- 
+
 RUN groupadd -r ijinspector && useradd --no-log-init --gid ijinspector --home-dir /home/ijinspector --create-home ijinspector
 
 WORKDIR /home/ijinspector
@@ -49,5 +49,6 @@ RUN chmod -R 777 /etc/idea
 #switch to root to launch the entrypoint. it will use gosu to drop down to ijinspector
 USER root
 COPY entrypoint.sh /
+COPY src /script
 
 ENTRYPOINT ["/entrypoint.sh"]
