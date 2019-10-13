@@ -3,6 +3,7 @@ const fs = require('fs');
 const github = require('@actions/github');
 const core = require('@actions/core');
 const app = require("@octokit/app");
+const exec = require('@actions/exec');
 const { GITHUB_SHA, GITHUB_EVENT_PATH, GITHUB_TOKEN, GITHUB_WORKSPACE } = process.env
 
 const InspectionParser = require('./InspectionParser');
@@ -14,6 +15,7 @@ if (!fs.existsSync(path)) {
     console.log("directory doesn't exist");
     process.exit();
 }
+await exec.exec('/home/ijinspector/idea-IC/bin/inspect.sh . ./Default.xml . -d . -v2');
 const parser = new InspectionParser();
 
 fs.readdir(dir, function (err, files) { if (err) throw err;
