@@ -9,8 +9,8 @@ const { GITHUB_SHA, GITHUB_EVENT_PATH, GITHUB_TOKEN, GITHUB_WORKSPACE } = proces
 const InspectionParser = require('./InspectionParser');
 
 
-console.log(__dirname);
-const dir = path.join(__dirname, '.out');
+console.log(process.cwd());
+const dir = path.join(process.cwd(), '.out');
 if (!fs.existsSync(path)) {
     console.log("directory doesn't exist");
     process.exit();
