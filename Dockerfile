@@ -1,25 +1,39 @@
+# Build the actual script as a part of the multi-stage build. This will package
+# all the scripts and node10 into a single binary. At the time of writing,
+# only Node 10 was the latest available version through Zeit.
+FROM node:10 as script
+
+COPY       /src /opt
+WORKDIR    /opt
+RUN        npm install
+RUN        npx pkg --output=inspector .
+RUN        chmod +x inspector
+RUN        ./inspector
+
+
+# The actual container inside which the inspections i.e. IDEA is run. This is a
+# plain OpenJSK container.
 FROM openjdk:8u151-jdk
 
-ENV GOSU_VERSION 1.10
+# Copying over the previously built binary from the sidecar containiner into this
+COPY       --from=script /opt/inspector /usr/local/bin/
+RUN        chmod +x /usr/local/bin/inspector
 
 RUN apt-get update \
  && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
      vim \
      wget \
      maven \
-     groovy \
- && dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')" \
- && wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch" \
- && chmod +x /usr/local/bin/gosu \
- && gosu nobody true \
- && apt-get clean \
- && rm -rf /var/lib/apt/lists/*
+     groovy
+# Clean the APT cache to reduce the size of the container. This step is for
+# hygiene and can be omitted if needed.
+RUN        apt-get clean
+RUN        rm -rf /var/lib/apt/lists/*
 
 RUN groupadd -r ijinspector && useradd --no-log-init --gid ijinspector --home-dir /home/ijinspector --create-home ijinspector
 
-WORKDIR /home/ijinspector
-
-USER ijinspector:ijinspector
+WORKDIR    /home/ijinspector
+USER       ijinspector:ijinspector
 
 ARG IDEA_VERSION=ideaIC-2018.1.8
 
@@ -28,31 +42,21 @@ RUN curl https://download-cf.jetbrains.com/idea/${IDEA_VERSION}-no-jdk.tar.gz > 
   && tar -x -C idea-IC --strip-components=1 -z -f /tmp/ideaIC-jdk.tar.gz \
   && rm /tmp/ideaIC-jdk.tar.gz
 
-RUN curl -L https://dl.bintray.com/groovy/maven/apache-groovy-binary-2.4.13.zip > /tmp/apache-groovy.zip \
-  && unzip /tmp/apache-groovy.zip \
-  && rm /tmp/apache-groovy.zip \
-  && mv groovy-* groovy \
-  && curl -L https://github.com/bentolor/idea-cli-inspector/archive/master.zip > /tmp/bentolor.zip \
-  && unzip /tmp/bentolor.zip \
-  && rm /tmp/bentolor.zip \
-  && mv idea-cli-inspector-* idea-cli-inspector
-
-ENV PATH="/home/ijinspector/groovy/bin:${PATH}"
 ENV IDEA_HOME="/home/ijinspector/idea-IC"
 
 COPY --chown=ijinspector:ijinspector jdk.table.xml /etc/idea/config/options/
 COPY --chown=ijinspector:ijinspector jdk.table.xml /home/ijinspector/.IdeaIC2018.1/config/options/jdk.table.xml
 
-RUN echo idea.config.path=/etc/idea/config >> /home/ijinspector/idea-IC/bin/idea.properties
-RUN chmod -R 777 /etc/idea
+# Configure the path of the idea properties. IDEA uses this property to deduce
+# where it should look for the jdk.table.xml file. If this property isn't set,
+# it won't be able to find the jdk.table.xml file and it crashes and burns with
+# all sorts of gibberish errors.
+RUN        echo idea.config.path=/etc/idea/config >> /home/ijinspector/idea-IC/bin/idea.properties
+# Set the permissions of the IDEA directory for hygiene purposes.
+RUN        chmod -R 777 /etc/idea
 
-#switch to root to launch the entrypoint. it will use gosu to drop down to ijinspector
-USER root
-COPY entrypoint.sh /
-
-COPY       src /script
-WORKDIR    /script
-RUN        npm install
+USER       root
+COPY       entrypoint.sh /
 
 
 WORKDIR    /home/ijinspector

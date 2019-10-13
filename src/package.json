@@ -15,6 +15,14 @@
     "@actions/io": "^1.0.1",
     "@actions/tool-cache": "^1.1.2",
     "@octokit/app": "^4.1.0",
+    "pkg": "4.4.0",
     "xml2js": "^0.4.22"
-  }
+  },
+  "pkg": {
+    "scripts": "*.js",
+    "targets": [
+      "node10"
+    ]
+  },
+  "bin": "index.js"
 }
