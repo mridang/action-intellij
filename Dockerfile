@@ -46,15 +46,6 @@ COPY --chown=ijinspector:ijinspector jdk.table.xml /home/ijinspector/.IdeaIC2018
 RUN echo idea.config.path=/etc/idea/config >> /home/ijinspector/idea-IC/bin/idea.properties
 RUN chmod -R 777 /etc/idea
 
-#let's pre-create empty dirs for mounts created by the entrypoint script
-RUN mkdir -p /home/ijinspector/idea-project-tmprw \
-    && mkdir -p /home/ijinspector/idea-project \
-    && mkdir -p /home/ijinspector/idea-project-overlay-workdir
-
-# declare a VOLUME so that its filesystem is not of type overlay so that we can create an overlay in the entrypoint
-VOLUME /home/ijinspector
-WORKDIR /home/ijinspector/idea-project-tmprw
-
 #switch to root to launch the entrypoint. it will use gosu to drop down to ijinspector
 USER root
 COPY entrypoint.sh /
