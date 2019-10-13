@@ -4,18 +4,25 @@ const github = require('@actions/github');
 const core = require('@actions/core');
 const app = require("@octokit/app");
 const exec = require('@actions/exec');
-const { GITHUB_SHA, GITHUB_EVENT_PATH, GITHUB_TOKEN, GITHUB_WORKSPACE } = process.env
+const { GITHUB_SHA, GITHUB_EVENT_PATH, GITHUB_TOKEN, GITHUB_WORKSPACE, RUNNER_TEMP } = process.env
+
+
+const OUTPUT_DIR = "-d";
+const VERBOSITY_LEVEL = "-v2";
+const INSPECTION_XML = path.join(GITHUB_WORKSPACE, 'Default.xml');
 
 const InspectionParser = require('./InspectionParser');
 
 
+console.log(INSPECTION_XML);
 console.log(process.cwd());
-const dir = path.join(process.cwd(), '.out');
-if (!fs.existsSync(path)) {
+if (!fs.existsSync(INSPECTION_XML)) {
     console.log("directory doesn't exist");
     process.exit();
 }
-exec.exec("/home/ijinspector/idea-IC/bin/inspect.sh . ./Default.xml . -d . -v2")
+
+
+exec.exec("/home/ijinspector/idea-IC/bin/inspect.sh", [GITHUB_WORKSPACE, INSPECTION_XML, RUNNER_TEMP, OUTPUT_DIR, GITHUB_WORKSPACE, VERBOSITY_LEVEL])
 const parser = new InspectionParser();
 
 fs.readdir(dir, function (err, files) { if (err) throw err;
