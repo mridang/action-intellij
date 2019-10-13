@@ -1,0 +1,74 @@
+
+<problems is_local_tool="true">
+<problem>
+  <file>file://$PROJECT_DIR$/app/com/nosto/utils/ByteArrayMultiInputStreamOutputStream.java</file>
+  <line>1</line>
+  <module>nailgun</module>
+  <package>com.nosto.utils</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/com/nosto/utils/ByteArrayMultiInputStreamOutputStream.java" />
+  <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Dangling Javadoc comment</problem_class>
+  <description>Dangling Javadoc comment #loc</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/com/nosto/play/utils/PlayPlatformUtils.java</file>
+  <line>1</line>
+  <module>nailgun</module>
+  <package>com.nosto.play.utils</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/com/nosto/play/utils/PlayPlatformUtils.java" />
+  <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Dangling Javadoc comment</problem_class>
+  <description>Dangling Javadoc comment #loc</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/com/nosto/jobs/Bootstrap.java</file>
+  <line>1</line>
+  <module>nailgun</module>
+  <package>com.nosto.jobs</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/com/nosto/jobs/Bootstrap.java" />
+  <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Dangling Javadoc comment</problem_class>
+  <description>Dangling Javadoc comment #loc</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/com/nosto/ThumbnailRequest.java</file>
+  <line>1</line>
+  <module>nailgun</module>
+  <package>com.nosto</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/com/nosto/ThumbnailRequest.java" />
+  <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Dangling Javadoc comment</problem_class>
+  <description>Dangling Javadoc comment #loc</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/com/nosto/HttpThumbnailRequest.java</file>
+  <line>1</line>
+  <module>nailgun</module>
+  <package>com.nosto</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/com/nosto/HttpThumbnailRequest.java" />
+  <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Dangling Javadoc comment</problem_class>
+  <description>Dangling Javadoc comment #loc</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/test/com/nosto/utils/ByteArrayMultiInputStreamOutputStreamTest.java</file>
+  <line>1</line>
+  <module>nailgun</module>
+  <package>com.nosto.utils</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/test/com/nosto/utils/ByteArrayMultiInputStreamOutputStreamTest.java" />
+  <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Dangling Javadoc comment</problem_class>
+  <description>Dangling Javadoc comment #loc</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/com/nosto/resizer/ImageProcessor.java</file>
+  <line>1</line>
+  <module>nailgun</module>
+  <package>com.nosto.resizer</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/com/nosto/resizer/ImageProcessor.java" />
+  <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Dangling Javadoc comment</problem_class>
+  <description>Dangling Javadoc comment #loc</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/test/com/nosto/resizer/ExpandBackgroundTest.java</file>
+  <line>1</line>
+  <module>nailgun</module>
+  <package>com.nosto.resizer</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/test/com/nosto/resizer/ExpandBackgroundTest.java" />
+  <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Dangling Javadoc comment</problem_class>
+  <description>Dangling Javadoc comment #loc</description>
+</problem></problems>

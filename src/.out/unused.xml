@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems is_local_tool="false">
+  <problem>
+    <file>file://$PROJECT_DIR$/app/com/nosto/HttpThumbnailRequest.java</file>
+    <line>44</line>
+    <module>nailgun</module>
+    <package>com.nosto</package>
+    <entry_point TYPE="method" FQNAME="com.nosto.HttpThumbnailRequest java.lang.String toString()" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Method overrides a library method but&lt;ul&gt;&lt;li&gt;its class is never instantiated OR&lt;/li&gt;&lt;li&gt;its class instantiation is not reachable from entry points.&lt;/li&gt;&lt;/ul&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/com/nosto/jobs/Bootstrap.java</file>
+    <line>29</line>
+    <module>nailgun</module>
+    <package>com.nosto.jobs</package>
+    <entry_point TYPE="method" FQNAME="com.nosto.jobs.Bootstrap void doJob()" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>&lt;ul&gt;&lt;li&gt;Method owner class is never instantiated OR&lt;/li&gt;&lt;li&gt;An instantiation is not reachable from entry points.&lt;/li&gt;&lt;/ul&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/com/nosto/play/utils/PlayPlatformUtils.java</file>
+    <line>33</line>
+    <module>nailgun</module>
+    <package>com.nosto.play.utils</package>
+    <entry_point TYPE="method" FQNAME="com.nosto.play.utils.PlayPlatformUtils boolean playInTestOrDevMode()" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Method is never used.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/com/nosto/play/utils/PlayPlatformUtils.java</file>
+    <line>54</line>
+    <module>nailgun</module>
+    <package>com.nosto.play.utils</package>
+    <entry_point TYPE="method" FQNAME="com.nosto.play.utils.PlayPlatformUtils java.lang.String getPublicHostName()" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Method is never used.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/com/nosto/play/utils/PlayPlatformUtils.java</file>
+    <line>42</line>
+    <module>nailgun</module>
+    <package>com.nosto.play.utils</package>
+    <entry_point TYPE="method" FQNAME="com.nosto.play.utils.PlayPlatformUtils boolean runningInDevMode()" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Method is never used.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/com/nosto/utils/ByteArrayMultiInputStreamOutputStream.java</file>
+    <line>24</line>
+    <module>nailgun</module>
+    <package>com.nosto.utils</package>
+    <entry_point TYPE="method" FQNAME="com.nosto.utils.ByteArrayMultiInputStreamOutputStream ByteArrayMultiInputStreamOutputStream(int size)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Constructor has usage(s) but they all belong to calls chain that has no members reachable from entry points.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/com/nosto/resizer/ImageProcessor.java</file>
+    <line>62</line>
+    <module>nailgun</module>
+    <package>com.nosto.resizer</package>
+    <entry_point TYPE="method" FQNAME="com.nosto.resizer.ImageProcessor void resize(int maxWidth, int maxHeight)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Method is not reachable from entry points.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/com/nosto/resizer/ImageProcessor.java</file>
+    <line>54</line>
+    <module>nailgun</module>
+    <package>com.nosto.resizer</package>
+    <entry_point TYPE="field" FQNAME="com.nosto.resizer.ImageProcessor IMAGE_TYPE_IDENTIFIER" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Field has no usages.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/com/nosto/resizer/ImageProcessor.java</file>
+    <line>79</line>
+    <module>nailgun</module>
+    <package>com.nosto.resizer</package>
+    <entry_point TYPE="method" FQNAME="com.nosto.resizer.ImageProcessor void resizeAndCrop(int width, int height, double scale, double wRatio, double hRatio)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Method is not reachable from entry points.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/com/nosto/resizer/ImageProcessor.java</file>
+    <line>53</line>
+    <module>nailgun</module>
+    <package>com.nosto.resizer</package>
+    <entry_point TYPE="field" FQNAME="com.nosto.resizer.ImageProcessor COMPRESS_TIMER" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Field has no usages.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/com/nosto/resizer/ImageFetcher.java</file>
+    <line>38</line>
+    <module>nailgun</module>
+    <package>com.nosto.resizer</package>
+    <entry_point TYPE="method" FQNAME="com.nosto.resizer.ImageFetcher ImageFetcher(java.lang.String merchant, java.lang.String productId)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Constructor has usage(s) but they all belong to calls chain that has no members reachable from entry points.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/controllers/Application.java</file>
+    <line>194</line>
+    <module>nailgun</module>
+    <package>controllers</package>
+    <entry_point TYPE="method" FQNAME="controllers.Application.UploadToS3Job void doJob()" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>&lt;ul&gt;&lt;li&gt;Method owner class is never instantiated OR&lt;/li&gt;&lt;li&gt;An instantiation is not reachable from entry points.&lt;/li&gt;&lt;/ul&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/controllers/Application.java</file>
+    <line>69</line>
+    <module>nailgun</module>
+    <package>controllers</package>
+    <entry_point TYPE="method" FQNAME="controllers.Application void stopTimer()" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Method is never used.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/controllers/Application.java</file>
+    <line>76</line>
+    <module>nailgun</module>
+    <package>controllers</package>
+    <entry_point TYPE="method" FQNAME="controllers.Application void health()" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Method is never used.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/controllers/Application.java</file>
+    <line>64</line>
+    <module>nailgun</module>
+    <package>controllers</package>
+    <entry_point TYPE="method" FQNAME="controllers.Application void startTimer()" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Method is never used.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/controllers/Application.java</file>
+    <line>182</line>
+    <module>nailgun</module>
+    <package>controllers</package>
+    <entry_point TYPE="method" FQNAME="controllers.Application void removeCookies()" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Method is never used.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/controllers/Application.java</file>
+    <line>81</line>
+    <module>nailgun</module>
+    <package>controllers</package>
+    <entry_point TYPE="method" FQNAME="controllers.Application void jpegThumbs(java.lang.String accountId, java.lang.String thumbnailVersion, java.lang.String productId, java.lang.String hash, java.lang.String nailgunVersion, java.lang.Long ttl)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Method is never used.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/controllers/Application.java</file>
+    <line>89</line>
+    <module>nailgun</module>
+    <package>controllers</package>
+    <entry_point TYPE="method" FQNAME="controllers.Application void newThumbs(java.lang.String accountId, java.lang.String thumbnailVersion, java.lang.String productId, java.lang.String hash, java.lang.String nailgunVersion, java.lang.Long ttl)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Method is never used.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/controllers/Application.java</file>
+    <line>85</line>
+    <module>nailgun</module>
+    <package>controllers</package>
+    <entry_point TYPE="method" FQNAME="controllers.Application void webpThumbs(java.lang.String accountId, java.lang.String thumbnailVersion, java.lang.String productId, java.lang.String hash, java.lang.String nailgunVersion, java.lang.Long ttl)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Method is never used.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/controllers/Application.java</file>
+    <line>189</line>
+    <module>nailgun</module>
+    <package>controllers</package>
+    <entry_point TYPE="method" FQNAME="controllers.Application.UploadToS3Job UploadToS3Job(com.amazonaws.services.s3.model.PutObjectRequest req)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Constructor has usage(s) but they all belong to calls chain that has no members reachable from entry points.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/test/com/nosto/utils/ByteArrayMultiInputStreamOutputStreamTest.java</file>
+    <line>40</line>
+    <module>nailgun</module>
+    <package>com.nosto.utils</package>
+    <entry_point TYPE="method" FQNAME="com.nosto.utils.ByteArrayMultiInputStreamOutputStreamTest void testNoWriteAfterGetLength()" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>&lt;ul&gt;&lt;li&gt;Method owner class is never instantiated OR&lt;/li&gt;&lt;li&gt;An instantiation is not reachable from entry points.&lt;/li&gt;&lt;/ul&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/test/com/nosto/utils/ByteArrayMultiInputStreamOutputStreamTest.java</file>
+    <line>32</line>
+    <module>nailgun</module>
+    <package>com.nosto.utils</package>
+    <entry_point TYPE="method" FQNAME="com.nosto.utils.ByteArrayMultiInputStreamOutputStreamTest void testNoWriteAfterRead()" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>&lt;ul&gt;&lt;li&gt;Method owner class is never instantiated OR&lt;/li&gt;&lt;li&gt;An instantiation is not reachable from entry points.&lt;/li&gt;&lt;/ul&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/test/com/nosto/utils/ByteArrayMultiInputStreamOutputStreamTest.java</file>
+    <line>24</line>
+    <module>nailgun</module>
+    <package>com.nosto.utils</package>
+    <entry_point TYPE="method" FQNAME="com.nosto.utils.ByteArrayMultiInputStreamOutputStreamTest void testMultipleReads()" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>&lt;ul&gt;&lt;li&gt;Method owner class is never instantiated OR&lt;/li&gt;&lt;li&gt;An instantiation is not reachable from entry points.&lt;/li&gt;&lt;/ul&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/test/com/nosto/resizer/ExpandBackgroundTest.java</file>
+    <line>52</line>
+    <module>nailgun</module>
+    <package>com.nosto.resizer</package>
+    <entry_point TYPE="method" FQNAME="com.nosto.resizer.ExpandBackgroundTest void testLandscape()" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>&lt;ul&gt;&lt;li&gt;Method owner class is never instantiated OR&lt;/li&gt;&lt;li&gt;An instantiation is not reachable from entry points.&lt;/li&gt;&lt;/ul&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/test/com/nosto/resizer/ExpandBackgroundTest.java</file>
+    <line>35</line>
+    <module>nailgun</module>
+    <package>com.nosto.resizer</package>
+    <entry_point TYPE="method" FQNAME="com.nosto.resizer.ExpandBackgroundTest void init()" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Method is never used.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/test/com/nosto/resizer/ExpandBackgroundTest.java</file>
+    <line>62</line>
+    <module>nailgun</module>
+    <package>com.nosto.resizer</package>
+    <entry_point TYPE="method" FQNAME="com.nosto.resizer.ExpandBackgroundTest void testSquare()" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>&lt;ul&gt;&lt;li&gt;Method owner class is never instantiated OR&lt;/li&gt;&lt;li&gt;An instantiation is not reachable from entry points.&lt;/li&gt;&lt;/ul&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/test/com/nosto/resizer/ExpandBackgroundTest.java</file>
+    <line>42</line>
+    <module>nailgun</module>
+    <package>com.nosto.resizer</package>
+    <entry_point TYPE="method" FQNAME="com.nosto.resizer.ExpandBackgroundTest void testPortrait()" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>&lt;ul&gt;&lt;li&gt;Method owner class is never instantiated OR&lt;/li&gt;&lt;li&gt;An instantiation is not reachable from entry points.&lt;/li&gt;&lt;/ul&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/test/com/nosto/resizer/encoders/JPEGEncoderTest.java</file>
+    <line>17</line>
+    <module>nailgun</module>
+    <package>com.nosto.resizer.encoders</package>
+    <entry_point TYPE="method" FQNAME="com.nosto.resizer.encoders.JPEGEncoderTest void testJPEGEncoding()" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>&lt;ul&gt;&lt;li&gt;Method owner class is never instantiated OR&lt;/li&gt;&lt;li&gt;An instantiation is not reachable from entry points.&lt;/li&gt;&lt;/ul&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/test/com/nosto/resizer/encoders/WebPEncoderTest.java</file>
+    <line>17</line>
+    <module>nailgun</module>
+    <package>com.nosto.resizer.encoders</package>
+    <entry_point TYPE="method" FQNAME="com.nosto.resizer.encoders.WebPEncoderTest void testWebPEncoding()" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>&lt;ul&gt;&lt;li&gt;Method owner class is never instantiated OR&lt;/li&gt;&lt;li&gt;An instantiation is not reachable from entry points.&lt;/li&gt;&lt;/ul&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/com/nosto/jobs/Bootstrap.java</file>
+    <line>27</line>
+    <module>nailgun</module>
+    <package>com.nosto.jobs</package>
+    <entry_point TYPE="class" FQNAME="com.nosto.jobs.Bootstrap" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/com/nosto/resizer/encoders/ImageEncoder.java</file>
+    <line>23</line>
+    <module>nailgun</module>
+    <package>com.nosto.resizer.encoders</package>
+    <entry_point TYPE="class" FQNAME="com.nosto.resizer.encoders.ImageEncoder" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>&amp;nbsp;Abstract&amp;nbsp;class has 2 direct or indirect implementations but &lt;ul&gt;&lt;li&gt;—they are never instantiated OR&lt;/li&gt;&lt;li&gt;—no instantiations are reachable from entry points.&lt;/li&gt;&lt;/ul&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/controllers/Application.java</file>
+    <line>42</line>
+    <module>nailgun</module>
+    <package>controllers</package>
+    <entry_point TYPE="class" FQNAME="controllers.Application" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>No class references has been found. Class static initializer is not reachable.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/test/com/nosto/utils/ByteArrayMultiInputStreamOutputStreamTest.java</file>
+    <line>19</line>
+    <module>nailgun</module>
+    <package>com.nosto.utils</package>
+    <entry_point TYPE="class" FQNAME="com.nosto.utils.ByteArrayMultiInputStreamOutputStreamTest" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/test/com/nosto/resizer/ExpandBackgroundTest.java</file>
+    <line>28</line>
+    <module>nailgun</module>
+    <package>com.nosto.resizer</package>
+    <entry_point TYPE="class" FQNAME="com.nosto.resizer.ExpandBackgroundTest" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/test/com/nosto/resizer/encoders/JPEGEncoderTest.java</file>
+    <line>14</line>
+    <module>nailgun</module>
+    <package>com.nosto.resizer.encoders</package>
+    <entry_point TYPE="class" FQNAME="com.nosto.resizer.encoders.JPEGEncoderTest" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/test/com/nosto/resizer/encoders/WebPEncoderTest.java</file>
+    <line>14</line>
+    <module>nailgun</module>
+    <package>com.nosto.resizer.encoders</package>
+    <entry_point TYPE="class" FQNAME="com.nosto.resizer.encoders.WebPEncoderTest" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+</problems>
+

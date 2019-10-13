@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems is_local_tool="false">
+  <problem>
+    <file>file://$PROJECT_DIR$/app/com/nosto/jobs/Bootstrap.java</file>
+    <line>27</line>
+    <module>nailgun</module>
+    <package>com.nosto.jobs</package>
+    <entry_point TYPE="class" FQNAME="com.nosto.jobs.Bootstrap" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="packageLocal" />
+    </hints>
+    <description>Can be package-private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/com/nosto/resizer/encoders/WebPEncoder.java</file>
+    <line>68</line>
+    <module>nailgun</module>
+    <package>com.nosto.resizer.encoders</package>
+    <entry_point TYPE="method" FQNAME="com.nosto.resizer.encoders.WebPEncoder java.lang.String getTypeIdentifier()" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="packageLocal" />
+    </hints>
+    <description>Can be package-private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/com/nosto/resizer/encoders/ImageEncoder.java</file>
+    <line>57</line>
+    <module>nailgun</module>
+    <package>com.nosto.resizer.encoders</package>
+    <entry_point TYPE="method" FQNAME="com.nosto.resizer.encoders.ImageEncoder javax.imageio.ImageWriteParam getImageWriteParam(javax.imageio.ImageWriter writer, com.nosto.resizer.ImageVersion version)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="protected" />
+    </hints>
+    <description>Can be protected</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/com/nosto/resizer/encoders/ImageEncoder.java</file>
+    <line>55</line>
+    <module>nailgun</module>
+    <package>com.nosto.resizer.encoders</package>
+    <entry_point TYPE="method" FQNAME="com.nosto.resizer.encoders.ImageEncoder javax.imageio.ImageWriter getWriter()" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="protected" />
+    </hints>
+    <description>Can be protected</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/com/nosto/resizer/encoders/ImageEncoder.java</file>
+    <line>26</line>
+    <module>nailgun</module>
+    <package>com.nosto.resizer.encoders</package>
+    <entry_point TYPE="field" FQNAME="com.nosto.resizer.encoders.ImageEncoder COMPRESSION_FACTOR" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="packageLocal" />
+    </hints>
+    <description>Can be package-private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/controllers/Application.java</file>
+    <line>42</line>
+    <module>nailgun</module>
+    <package>controllers</package>
+    <entry_point TYPE="class" FQNAME="controllers.Application" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="packageLocal" />
+    </hints>
+    <description>Can be package-private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/controllers/Application.java</file>
+    <line>189</line>
+    <module>nailgun</module>
+    <package>controllers</package>
+    <entry_point TYPE="method" FQNAME="controllers.Application.UploadToS3Job UploadToS3Job(com.amazonaws.services.s3.model.PutObjectRequest req)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="packageLocal" />
+    </hints>
+    <description>Can be package-private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/test/com/nosto/utils/ByteArrayMultiInputStreamOutputStreamTest.java</file>
+    <line>19</line>
+    <module>nailgun</module>
+    <package>com.nosto.utils</package>
+    <entry_point TYPE="class" FQNAME="com.nosto.utils.ByteArrayMultiInputStreamOutputStreamTest" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="packageLocal" />
+    </hints>
+    <description>Can be package-private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/test/com/nosto/utils/ByteArrayMultiInputStreamOutputStreamTest.java</file>
+    <line>21</line>
+    <module>nailgun</module>
+    <package>com.nosto.utils</package>
+    <entry_point TYPE="field" FQNAME="com.nosto.utils.ByteArrayMultiInputStreamOutputStreamTest msg" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/test/com/nosto/resizer/ExpandBackgroundTest.java</file>
+    <line>71</line>
+    <module>nailgun</module>
+    <package>com.nosto.resizer</package>
+    <entry_point TYPE="method" FQNAME="com.nosto.resizer.ExpandBackgroundTest java.lang.String createSha256Hex(java.io.File sourceImg)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/test/com/nosto/resizer/ExpandBackgroundTest.java</file>
+    <line>28</line>
+    <module>nailgun</module>
+    <package>com.nosto.resizer</package>
+    <entry_point TYPE="class" FQNAME="com.nosto.resizer.ExpandBackgroundTest" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="packageLocal" />
+    </hints>
+    <description>Can be package-private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/test/com/nosto/resizer/encoders/JPEGEncoderTest.java</file>
+    <line>14</line>
+    <module>nailgun</module>
+    <package>com.nosto.resizer.encoders</package>
+    <entry_point TYPE="class" FQNAME="com.nosto.resizer.encoders.JPEGEncoderTest" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="packageLocal" />
+    </hints>
+    <description>Can be package-private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/test/com/nosto/resizer/encoders/WebPEncoderTest.java</file>
+    <line>14</line>
+    <module>nailgun</module>
+    <package>com.nosto.resizer.encoders</package>
+    <entry_point TYPE="class" FQNAME="com.nosto.resizer.encoders.WebPEncoderTest" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="packageLocal" />
+    </hints>
+    <description>Can be package-private</description>
+  </problem>
+</problems>
+

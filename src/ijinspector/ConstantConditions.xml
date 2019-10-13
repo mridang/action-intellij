@@ -1,0 +1,11 @@
+
+<problems is_local_tool="true">
+<problem>
+  <file>file://$PROJECT_DIR$/app/controllers/Application.java</file>
+  <line>148</line>
+  <module>nailgun</module>
+  <package>controllers</package>
+  <entry_point TYPE="method" FQNAME="controllers.Application void thumbnail(java.lang.String accountId, java.lang.String thumbnailVersion, java.lang.String productId, java.lang.String hash, java.lang.String nailgunVersion, java.lang.Long ttl, com.nosto.resizer.encoders.ImageEncoder encoder)" />
+  <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Constant conditions &amp; exceptions</problem_class>
+  <description>Method invocation &lt;code&gt;equals&lt;/code&gt; may produce &lt;code&gt;java.lang.NullPointerException&lt;/code&gt;</description>
+</problem></problems>

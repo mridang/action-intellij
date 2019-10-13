@@ -1,0 +1,20 @@
+
+<problems is_local_tool="true">
+<problem>
+  <file>file://$PROJECT_DIR$/app/com/nosto/play/utils/PlayPlatformUtils.java</file>
+  <line>56</line>
+  <module>nailgun</module>
+  <package>com.nosto.play.utils</package>
+  <entry_point TYPE="method" FQNAME="com.nosto.play.utils.PlayPlatformUtils java.lang.String getPublicHostName()" />
+  <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Redundant local variable</problem_class>
+  <description>Local variable &lt;code&gt;publicHostName&lt;/code&gt; is redundant #loc</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/com/nosto/resizer/ImageProcessor.java</file>
+  <line>184</line>
+  <module>nailgun</module>
+  <package>com.nosto.resizer</package>
+  <entry_point TYPE="method" FQNAME="com.nosto.resizer.ImageProcessor java.awt.image.BufferedImage cropImage(java.awt.image.BufferedImage src, java.awt.Rectangle rect)" />
+  <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Redundant local variable</problem_class>
+  <description>Local variable &lt;code&gt;dest&lt;/code&gt; is redundant #loc</description>
+</problem></problems>

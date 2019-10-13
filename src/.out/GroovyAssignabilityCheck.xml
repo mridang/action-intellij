@@ -1,0 +1,11 @@
+
+<problems is_local_tool="true">
+<problem>
+  <file>file://$PROJECT_DIR$/Jenkinsfile</file>
+  <line>18</line>
+  <module>nailgun</module>
+  <package>&lt;default&gt;</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Jenkinsfile" />
+  <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Incompatible type assignments</problem_class>
+  <description>Cannot infer argument types</description>
+</problem></problems>

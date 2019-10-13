@@ -1,0 +1,11 @@
+
+<problems is_local_tool="true">
+<problem>
+  <file>file://$PROJECT_DIR$/app/com/nosto/resizer/ImageVersion.java</file>
+  <line>118</line>
+  <module>nailgun</module>
+  <package>com.nosto.resizer</package>
+  <entry_point TYPE="field" FQNAME="com.nosto.resizer.ImageVersion LOOKUP" />
+  <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Simplify stream API call chains</problem_class>
+  <description>Arrays.asList().stream() can be replaced with Arrays.stream()</description>
+</problem></problems>
