@@ -13,6 +13,7 @@ const INSPECTION_XML = path.join(GITHUB_WORKSPACE, 'Default.xml');
 
 const InspectionParser = require('./InspectionParser');
 
+console.log(process.env);
 
 console.log(INSPECTION_XML);
 console.log(process.cwd());
