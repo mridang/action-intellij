@@ -79,3 +79,4 @@ for file in directory.xml:
    checks.add(parser.parse(file))
 api.post(checks);
 */
+process.exit(1);
