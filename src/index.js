@@ -37,10 +37,7 @@ fs.readdir(TEMP_DIR, function (err, files) { if (err) throw err;
   files.forEach( function (file) {
     const fullPath = path.join(TEMP_DIR, file);
     console.log("Parsing %s", fullPath)
-    parser.parse(fullPath)
-    .then(result => {
-      //console.log(result);
-    });
+
   });
   console.log(myfiles);
 });
