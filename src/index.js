@@ -4,7 +4,7 @@ const github = require('@actions/github');
 const core = require('@actions/core');
 const app = require("@octokit/app");
 const exec = require('@actions/exec');
-const { GITHUB_SHA, GITHUB_EVENT_PATH, GITHUB_TOKEN, GITHUB_WORKSPACE, RUNNER_TEMP } = process.env
+const { GITHUB_SHA, GITHUB_EVENT_PATH, GITHUB_TOKEN, GITHUB_WORKSPACE, RUNNER_TEMP, JENKINS_USERNAME } = process.env
 
 console.log(process.env);
 const OUTPUT_DIR = "-d";
@@ -26,7 +26,7 @@ if (!fs.existsSync(INSPECTION_XML)) {
 exec.exec("/home/ijinspector/idea-IC/bin/inspect.sh", [GITHUB_WORKSPACE, INSPECTION_XML, RUNNER_TEMP, OUTPUT_DIR, GITHUB_WORKSPACE, VERBOSITY_LEVEL])
 const parser = new InspectionParser();
 
-fs.readdir(dir, function (err, files) { if (err) throw err;
+fs.readdir(OUTPUT_DIR, function (err, files) { if (err) throw err;
   myfiles = [];
   files.forEach( function (file) {
     const fullPath = path.join(dir, file);
