@@ -26,7 +26,7 @@ if (!fs.existsSync(INSPECTION_XML)) {
 
 
 console.log("will run command");
-exec.exec("/home/ijinspector/idea-IC/bin/inspect.sh", [GITHUB_WORKSPACE, INSPECTION_XML, TEMP_DIR, FLAG_OUTPUT_DIR, GITHUB_WORKSPACE, FLAG_VERBOSITY_LEVEL])
+await exec.exec("/home/ijinspector/idea-IC/bin/inspect.sh", [GITHUB_WORKSPACE, INSPECTION_XML, TEMP_DIR, FLAG_OUTPUT_DIR, GITHUB_WORKSPACE, FLAG_VERBOSITY_LEVEL])
 const parser = new InspectionParser();
 console.log("ran command");
 console.log(fs.existsSync(TEMP_DIR));
