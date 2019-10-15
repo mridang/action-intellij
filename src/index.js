@@ -23,10 +23,12 @@ if (!fs.existsSync(INSPECTION_XML)) {
 }
 
 
+console.log("will run command");
 exec.exec("/home/ijinspector/idea-IC/bin/inspect.sh", [GITHUB_WORKSPACE, INSPECTION_XML, RUNNER_TEMP, OUTPUT_DIR, GITHUB_WORKSPACE, VERBOSITY_LEVEL])
 const parser = new InspectionParser();
 console.log("ran command");
-console.log(fs.existsSync(OUTPUT_DIR));
+console.log(fs.existsSync(RUNNER_TEMP));
+
 
 fs.readdir(OUTPUT_DIR, function (err, files) { if (err) throw err;
   myfiles = [];
