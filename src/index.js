@@ -10,6 +10,7 @@ console.log(process.env);
 const OUTPUT_DIR = "-d";
 const VERBOSITY_LEVEL = "-v2";
 const INSPECTION_XML = path.join(GITHUB_WORKSPACE, 'Default.xml');
+const TEMP_DIR = os.tmpdir();
 
 const InspectionParser = require('./InspectionParser');
 
@@ -24,13 +25,13 @@ if (!fs.existsSync(INSPECTION_XML)) {
 
 
 console.log("will run command");
-exec.exec("/home/ijinspector/idea-IC/bin/inspect.sh", [GITHUB_WORKSPACE, INSPECTION_XML, RUNNER_TEMP, OUTPUT_DIR, GITHUB_WORKSPACE, VERBOSITY_LEVEL])
+exec.exec("/home/ijinspector/idea-IC/bin/inspect.sh", [GITHUB_WORKSPACE, INSPECTION_XML, RUNNER_TEMP, TEMP_DIR, GITHUB_WORKSPACE, VERBOSITY_LEVEL])
 const parser = new InspectionParser();
 console.log("ran command");
-console.log(fs.existsSync(RUNNER_TEMP));
+console.log(fs.existsSync(TEMP_DIR));
 
 
-fs.readdir(OUTPUT_DIR, function (err, files) { if (err) throw err;
+fs.readdir(TEMP_DIR, function (err, files) { if (err) throw err;
   myfiles = [];
   files.forEach( function (file) {
     const fullPath = path.join(dir, file);
