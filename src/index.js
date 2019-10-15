@@ -8,8 +8,8 @@ const exec = require('@actions/exec');
 const { GITHUB_SHA, GITHUB_EVENT_PATH, GITHUB_TOKEN, GITHUB_WORKSPACE, RUNNER_TEMP, JENKINS_USERNAME } = process.env
 
 console.log(process.env);
-const OUTPUT_DIR = "-d";
-const VERBOSITY_LEVEL = "-v2";
+const FLAG_OUTPUT_DIR = "-d";
+const FLAG_VERBOSITY_LEVEL = "-v2";
 const INSPECTION_XML = path.join(GITHUB_WORKSPACE, 'Default.xml');
 const TEMP_DIR = os.tmpdir();
 
@@ -26,7 +26,7 @@ if (!fs.existsSync(INSPECTION_XML)) {
 
 
 console.log("will run command");
-exec.exec("/home/ijinspector/idea-IC/bin/inspect.sh", [GITHUB_WORKSPACE, INSPECTION_XML, RUNNER_TEMP, TEMP_DIR, GITHUB_WORKSPACE, VERBOSITY_LEVEL])
+exec.exec("/home/ijinspector/idea-IC/bin/inspect.sh", [GITHUB_WORKSPACE, INSPECTION_XML, TEMP_DIR, FLAG_OUTPUT_DIR, GITHUB_WORKSPACE, FLAG_VERBOSITY_LEVEL])
 const parser = new InspectionParser();
 console.log("ran command");
 console.log(fs.existsSync(TEMP_DIR));
