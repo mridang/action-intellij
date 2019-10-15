@@ -8,7 +8,7 @@ WORKDIR    /opt
 RUN        npm install
 RUN        npx pkg --output=inspector .
 RUN        chmod +x inspector
-RUN        ./inspector
+#RUN        ./inspector
 
 
 # The actual container inside which the inspections i.e. IDEA is run. This is a
