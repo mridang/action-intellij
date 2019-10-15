@@ -6,7 +6,7 @@ const app = require("@octokit/app");
 const exec = require('@actions/exec');
 const { GITHUB_SHA, GITHUB_EVENT_PATH, GITHUB_TOKEN, GITHUB_WORKSPACE, RUNNER_TEMP } = process.env
 
-
+console.log(process.env);
 const OUTPUT_DIR = "-d";
 const VERBOSITY_LEVEL = "-v2";
 const INSPECTION_XML = path.join(GITHUB_WORKSPACE, 'Default.xml');
