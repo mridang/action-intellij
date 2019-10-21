@@ -75,7 +75,12 @@ async function run() {
     console.log(pullRequest);
 }
 
-doInspect();
+try {
+  doInspect();
+} catch {
+  console.log("poop");
+}
+
 //run();
 
 
