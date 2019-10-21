@@ -24,23 +24,25 @@ if (!fs.existsSync(INSPECTION_XML)) {
     process.exit();
 }
 
+async function doInspect() {
+  console.log("will run command");
+  await exec.exec("/home/ijinspector/idea-IC/bin/inspect.sh", [GITHUB_WORKSPACE, INSPECTION_XML, TEMP_DIR, FLAG_OUTPUT_DIR, GITHUB_WORKSPACE, FLAG_VERBOSITY_LEVEL])
+  const parser = new InspectionParser();
+  console.log("ran command");
+  console.log(fs.existsSync(TEMP_DIR));
 
-console.log("will run command");
-await exec.exec("/home/ijinspector/idea-IC/bin/inspect.sh", [GITHUB_WORKSPACE, INSPECTION_XML, TEMP_DIR, FLAG_OUTPUT_DIR, GITHUB_WORKSPACE, FLAG_VERBOSITY_LEVEL])
-const parser = new InspectionParser();
-console.log("ran command");
-console.log(fs.existsSync(TEMP_DIR));
 
+  fs.readdir(TEMP_DIR, function (err, files) { if (err) throw err;
+    myfiles = [];
+    files.forEach( function (file) {
+      const fullPath = path.join(TEMP_DIR, file);
+      console.log("Parsing %s", fullPath)
 
-fs.readdir(TEMP_DIR, function (err, files) { if (err) throw err;
-  myfiles = [];
-  files.forEach( function (file) {
-    const fullPath = path.join(TEMP_DIR, file);
-    console.log("Parsing %s", fullPath)
-
+    });
+    console.log(myfiles);
   });
-  console.log(myfiles);
-});
+}
+
 
 
 async function run() {
