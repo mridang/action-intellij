@@ -58,9 +58,12 @@ async function doInspect() {
       return true;
     }
   })
-  .forEach(path => {
+  .map(path => {
     console.log("Parsing %s", path)
-    //parser.parse()
+    return parser.parse(path)
+  })
+  .forEach(annotations => {
+    console.log(annotations)
   });
 }
 
