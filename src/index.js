@@ -71,6 +71,7 @@ async function run() {
     console.log(pullRequest);
 }
 
+doInspect();
 //run();
 
 
