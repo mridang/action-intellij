@@ -27,6 +27,10 @@ if (!fs.existsSync(INSPECTION_XML)) {
 async function doInspect() {
   console.log("will run command");
   await exec.exec("/home/ijinspector/idea-IC/bin/inspect.sh", [GITHUB_WORKSPACE, INSPECTION_XML, TEMP_DIR, FLAG_OUTPUT_DIR, GITHUB_WORKSPACE, FLAG_VERBOSITY_LEVEL])
+  exec.exec("/home/ijinspector/idea-IC/bin/inspect.sh", [GITHUB_WORKSPACE, INSPECTION_XML, TEMP_DIR, FLAG_OUTPUT_DIR, GITHUB_WORKSPACE, FLAG_VERBOSITY_LEVEL])
+  .then(function(dee) {
+    console.log("poop")
+  })
   const parser = new InspectionParser();
   console.log("ran command");
   console.log(fs.existsSync(TEMP_DIR));
