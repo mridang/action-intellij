@@ -23,6 +23,15 @@ if (!fs.existsSync(INSPECTION_XML)) {
     process.exit();
 }
 
+function walkDir(dir, callback) {
+  fs.readdirSync(dir).forEach( f => {
+    let dirPath = path.join(dir, f);
+    let isDirectory = fs.statSync(dirPath).isDirectory();
+    isDirectory ?
+      walkDir(dirPath, callback) : callback(path.join(dir, f));
+  });
+};
+
 async function doInspect() {
   console.log("Running the IDEA inspector");
 
@@ -31,14 +40,8 @@ async function doInspect() {
   console.log("Finished inspecting code");
   console.log(fs.existsSync(TEMP_DIR));
 
-  const parser = new InspectionParser();
-  fs.readdir(TEMP_DIR, function (err, files) { if (err) throw err;
-    myfiles = [];
-    files.forEach( function (file) {
-      const fullPath = path.join(TEMP_DIR, file);
-      console.log("Parsing %s", fullPath)
-    });
-    console.log(myfiles);
+  walkDir(TEMP_DIR, function(filePath) {
+    console.log(filePath);
   });
 }
 
