@@ -49,6 +49,8 @@ async function doInspect() {
   .forEach(file => {
     const fullPath = path.join(TEMP_DIR, file);
     if (fs.statSync(fullPath).isDirectory()) {
+      console.debug("Skipping directory %s", fullPath);
+    } else {
       console.log("Parsing %s", fullPath)
     }
   });
