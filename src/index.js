@@ -43,6 +43,15 @@ async function doInspect() {
   walkDir(TEMP_DIR, function(filePath) {
     console.log(filePath);
   });
+
+  const parser = new InspectionParser();
+  fs.readdirSync(TEMP_DIR)
+  .forEach(file => {
+    const fullPath = path.join(TEMP_DIR, file);
+    if (fs.statSync(dirPath).isDirectory()) {
+      console.log("Parsing %s", fullPath)
+    }
+  });
 }
 
 try {
