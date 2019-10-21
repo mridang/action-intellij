@@ -63,10 +63,6 @@ async function doInspect() {
     console.log("Parsing %s", fullPath)
     return parser.parse(fullPath)
   })
-  .reduce((combinator, pilot) => {
-    console.log("Reducing all output")
-    combinator.push(...pilot)
-  }, [])
   .forEach(annotations => {
     console.log(annotations)
   });
