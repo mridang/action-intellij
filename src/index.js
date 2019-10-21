@@ -46,15 +46,21 @@ async function doInspect() {
 
   const parser = new InspectionParser();
   fs.readdirSync(TEMP_DIR)
-  .forEach(file => {
+  .filter(file => {
     const fullPath = path.join(TEMP_DIR, file);
     if (fs.statSync(fullPath).isDirectory()) {
       console.debug("Skipping directory %s", fullPath);
+      return false;
     } else if (file.startsWith('.')) {
       console.debug("Skipping dotfile %s", fullPath);
+      return false;
     } else {
-      console.log("Parsing %s", fullPath)
+      return true;
     }
+  })
+  .forEach(file => {
+    console.log("Parsing %s", fullPath)
+    //parser.parse()
   });
 }
 
