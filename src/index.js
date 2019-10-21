@@ -68,9 +68,14 @@ async function doInspect() {
   });
 }
 
-try {
-  doInspect()
-  .then(ff => process.exit(1));
-} catch {
-  process.exit(1)
-}
+
+doInspect()
+  .then(ff => {
+    console.log("Done");
+    process.exit(1)
+  })
+  .catch(err => {
+    console.log("Oops!");
+    console.log(err);
+    process.exit(1)
+  });
