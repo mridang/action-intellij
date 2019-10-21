@@ -60,5 +60,5 @@ try {
   doInspect()
   .then(ff => process.exit(1));
 } catch {
-  console.log("poop");
+  process.exit(1)
 }
