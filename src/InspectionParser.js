@@ -3,11 +3,10 @@ const xml = require('xml2js');
 
 class InspectionParser {
 
-  parse(path) {
+  async parse(path) {
     var data = fs.readFileSync(path, 'utf8');
-    return xml.parseStringPromise(data)
-    .then(result => {
-      return result.problems.problem
+    var result = await xml.parseStringPromise(data)
+    return result.problems.problem
       .map(problem => {
         return {
           path: problem.file[0],
@@ -17,7 +16,6 @@ class InspectionParser {
           message: problem.description[0]
         };
       });
-    });
   }
 }
 

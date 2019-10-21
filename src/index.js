@@ -31,26 +31,26 @@ async function doInspect() {
   console.log("Finished inspecting code");
   const parser = new InspectionParser();
   fs.readdirSync(TEMP_DIR)
-  .filter(file => {
-    const fullPath = path.join(TEMP_DIR, file);
-    if (fs.statSync(fullPath).isDirectory()) {
-      console.debug("Skipping directory %s", fullPath);
-      return false;
-    } else if (file.startsWith('.')) {
-      console.debug("Skipping dotfile %s", fullPath);
-      return false;
-    } else {
-      return true;
-    }
-  })
-  .map(file => {
-    const fullPath = path.join(TEMP_DIR, file);
-    console.log("Parsing %s", fullPath)
-    return parser.parse(fullPath)
-  })
-  .forEach(annotations => {
-    console.log(annotations)
-  });
+    .filter(file => {
+      const fullPath = path.join(TEMP_DIR, file);
+      if (fs.statSync(fullPath).isDirectory()) {
+        console.debug("Skipping directory %s", fullPath);
+        return false;
+      } else if (file.startsWith('.')) {
+        console.debug("Skipping dotfile %s", fullPath);
+        return false;
+      } else {
+        return true;
+      }
+    })
+    .map(file => {
+      const fullPath = path.join(TEMP_DIR, file);
+      console.log("Parsing %s", fullPath)
+      return parser.parse(fullPath)
+    })
+    .forEach(annotations => {
+      console.log(annotations)
+    });
 }
 
 
