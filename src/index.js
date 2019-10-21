@@ -48,7 +48,7 @@ async function doInspect() {
   fs.readdirSync(TEMP_DIR)
   .forEach(file => {
     const fullPath = path.join(TEMP_DIR, file);
-    if (fs.statSync(dirPath).isDirectory()) {
+    if (fs.statSync(fullPath).isDirectory()) {
       console.log("Parsing %s", fullPath)
     }
   });
