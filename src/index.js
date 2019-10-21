@@ -58,9 +58,10 @@ async function doInspect() {
       return true;
     }
   })
-  .map(path => {
-    console.log("Parsing %s", path)
-    return parser.parse(path)
+  .map(file => {
+    const fullPath = path.join(TEMP_DIR, file);
+    console.log("Parsing %s", fullPath)
+    return parser.parse(fullPath)
   })
   .forEach(annotations => {
     console.log(annotations)
