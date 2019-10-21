@@ -58,8 +58,8 @@ async function doInspect() {
       return true;
     }
   })
-  .forEach(file => {
-    console.log("Parsing %s", fullPath)
+  .forEach(path => {
+    console.log("Parsing %s", path)
     //parser.parse()
   });
 }
