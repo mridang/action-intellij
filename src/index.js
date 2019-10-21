@@ -50,6 +50,8 @@ async function doInspect() {
     const fullPath = path.join(TEMP_DIR, file);
     if (fs.statSync(fullPath).isDirectory()) {
       console.debug("Skipping directory %s", fullPath);
+    } else if (file.startsWith('.')) {
+      console.debug("Skipping dotfile %s", fullPath);
     } else {
       console.log("Parsing %s", fullPath)
     }
