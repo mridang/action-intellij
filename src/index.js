@@ -23,27 +23,12 @@ if (!fs.existsSync(INSPECTION_XML)) {
     process.exit();
 }
 
-function walkDir(dir, callback) {
-  fs.readdirSync(dir).forEach( f => {
-    let dirPath = path.join(dir, f);
-    let isDirectory = fs.statSync(dirPath).isDirectory();
-    isDirectory ?
-      walkDir(dirPath, callback) : callback(path.join(dir, f));
-  });
-};
-
 async function doInspect() {
   console.log("Running the IDEA inspector");
 
   await exec.exec("/home/ijinspector/idea-IC/bin/inspect.sh", [GITHUB_WORKSPACE, INSPECTION_XML, TEMP_DIR, FLAG_OUTPUT_DIR, GITHUB_WORKSPACE, FLAG_VERBOSITY_LEVEL])
 
   console.log("Finished inspecting code");
-  console.log(fs.existsSync(TEMP_DIR));
-
-  walkDir(TEMP_DIR, function(filePath) {
-    console.log(filePath);
-  });
-
   const parser = new InspectionParser();
   fs.readdirSync(TEMP_DIR)
   .filter(file => {
