@@ -46,9 +46,10 @@ async function doInspect() {
     .map(file => {
       const fullPath = path.join(TEMP_DIR, file);
       console.log("Parsing %s", fullPath)
+      console.log(parser.parse(fullPath))
       return parser.parse(fullPath)
     })
-    .then(annotations => {
+    .forEach(annotations => {
       console.log(annotations)
     });
 }
