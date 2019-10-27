@@ -49,6 +49,13 @@ async function doInspect() {
       console.log(parser.parse(fullPath))
       return parser.parse(fullPath)
     })
+    .reduce((promiseChain, currentTask) => {
+      return promiseChain.then(chainResults =>
+          currentTask.then(currentResult =>
+              [ ...chainResults, currentResult ]
+          )
+      );
+    }, Promise.resolve([]))
     .forEach(annotations => {
       console.log(annotations)
     });
