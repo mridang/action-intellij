@@ -48,7 +48,7 @@ async function doInspect() {
       console.log("Parsing %s", fullPath)
       return parser.parse(fullPath)
     })
-    .forEach(annotations => {
+    .then(annotations => {
       console.log(annotations)
     });
 }
