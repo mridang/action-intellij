@@ -1,8 +1,8 @@
 const InspectionParser = require('../InspectionParser');
 
 describe("Parse Path", () => {
+  let inspectionParse = new InspectionParser;
   test("Parse ConstantConditions", () => {
-    let inspectionParse = new InspectionParser;
     let output = inspectionParse.parse('../.out/ConstantConditions.xml');
     output.then(function (result) {
       expect(
@@ -12,7 +12,6 @@ describe("Parse Path", () => {
   });
 
   test("Parse DanglingJavadoc", () => {
-    let inspectionParse = new InspectionParser;
     let output = inspectionParse.parse('../.out/DanglingJavadoc.xml');
     output.then(function (result) {
       expect(
@@ -22,7 +21,6 @@ describe("Parse Path", () => {
   });
 
   test("Parse GroovyAssignabilityCheck", () => {
-    let inspectionParse = new InspectionParser;
     let output = inspectionParse.parse('../.out/GroovyAssignabilityCheck.xml');
     output.then(function (result) {
       expect(
@@ -32,7 +30,6 @@ describe("Parse Path", () => {
   });
 
   test("Parse InfiniteRecursion", () => {
-    let inspectionParse = new InspectionParser;
     let output = inspectionParse.parse('../.out/InfiniteRecursion.xml');
     output.then(function (result) {
       expect(
@@ -42,7 +39,6 @@ describe("Parse Path", () => {
   });
 
   test("Parse RedundantThrows", () => {
-    let inspectionParse = new InspectionParser;
     let output = inspectionParse.parse('../.out/RedundantThrows.xml');
     output.then(function (result) {
       expect(
@@ -52,7 +48,6 @@ describe("Parse Path", () => {
   });
 
   test("Parse SimplifyStreamApiCallChains", () => {
-    let inspectionParse = new InspectionParser;
     let output = inspectionParse.parse('../.out/SimplifyStreamApiCallChains.xml');
     output.then(function (result) {
       expect(
@@ -62,7 +57,6 @@ describe("Parse Path", () => {
   });
 
   test("Parse SpellCheckingInspection", () => {
-    let inspectionParse = new InspectionParser;
     let output = inspectionParse.parse('../.out/SpellCheckingInspection.xml');
     output.then(function (result) {
       expect(
@@ -72,7 +66,6 @@ describe("Parse Path", () => {
   });
 
   test("Parse UnnecessaryLocalVariable", () => {
-    let inspectionParse = new InspectionParser;
     let output = inspectionParse.parse('../.out/UnnecessaryLocalVariable.xml');
     output.then(function (result) {
       expect(
@@ -82,7 +75,6 @@ describe("Parse Path", () => {
   });
 
   test("Parse UnnecessaryReturn", () => {
-    let inspectionParse = new InspectionParser;
     let output = inspectionParse.parse('../.out/UnnecessaryReturn.xml');
     output.then(function (result) {
       expect(
@@ -92,7 +84,6 @@ describe("Parse Path", () => {
   });
 
   test("Parse unused", () => {
-    let inspectionParse = new InspectionParser;
     let output = inspectionParse.parse('../.out/unused.xml');
     output.then(function (result) {
       expect(
@@ -102,7 +93,6 @@ describe("Parse Path", () => {
   });
 
   test("Parse UNUSED_IMPORT", () => {
-    let inspectionParse = new InspectionParser;
     let output = inspectionParse.parse('../.out/UNUSED_IMPORT.xml');
     output.then(function (result) {
       expect(
@@ -112,7 +102,6 @@ describe("Parse Path", () => {
   });
 
   test("Parse WeakerAccess", () => {
-    let inspectionParse = new InspectionParser;
     let output = inspectionParse.parse('../.out/WeakerAccess.xml');
     output.then(function (result) {
       expect(
