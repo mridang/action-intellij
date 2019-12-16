@@ -5,14 +5,14 @@ const github = require('@actions/github');
 const core = require('@actions/core');
 const app = require("@octokit/app");
 const exec = require('@actions/exec');
-const { GITHUB_SHA, GITHUB_EVENT_PATH, GITHUB_TOKEN, GITHUB_WORKSPACE, RUNNER_TEMP, JENKINS_USERNAME } = process.env
+const { GITHUB_SHA, GITHUB_EVENT_PATH, GITHUB_TOKEN, GITHUB_WORKSPACE, RUNNER_TEMP, JENKINS_USERNAME } = process.env;
 
 const FLAG_OUTPUT_DIR = "-d";
 const FLAG_VERBOSITY_LEVEL = "-v2";
 const INSPECTION_XML = path.join(GITHUB_WORKSPACE, 'Default.xml');
 
 const TEMP_DIR = path.join(os.tmpdir(), 'inspect');
-fs.mkdirSync(TEMP_DIR)
+fs.mkdirSync(TEMP_DIR);
 
 const InspectionParser = require('./InspectionParser');
 
@@ -26,7 +26,7 @@ if (!fs.existsSync(INSPECTION_XML)) {
 async function doInspect() {
   console.log("Running the IDEA inspector");
 
-  await exec.exec("/home/ijinspector/idea-IC/bin/inspect.sh", [GITHUB_WORKSPACE, INSPECTION_XML, TEMP_DIR, FLAG_OUTPUT_DIR, GITHUB_WORKSPACE, FLAG_VERBOSITY_LEVEL])
+  await exec.exec("/home/ijinspector/idea-IC/bin/inspect.sh", [GITHUB_WORKSPACE, INSPECTION_XML, TEMP_DIR, FLAG_OUTPUT_DIR, GITHUB_WORKSPACE, FLAG_VERBOSITY_LEVEL]);
 
   console.log("Finished inspecting code");
   const parser = new InspectionParser();
@@ -45,8 +45,8 @@ async function doInspect() {
     })
     .map(file => {
       const fullPath = path.join(TEMP_DIR, file);
-      console.log("Parsing %s", fullPath)
-      console.log(parser.parse(fullPath))
+      console.log("Parsing %s", fullPath);
+      console.log(parser.parse(fullPath));
       return parser.parse(fullPath)
     })
     .reduce((promiseChain, currentTask) => {
