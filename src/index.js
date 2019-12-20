@@ -30,7 +30,7 @@ async function doInspect() {
 
   console.log("Finished inspecting code");
   const parser = new InspectionParser();
-  fs.readdirSync(TEMP_DIR)
+  return await Promise.all(fs.readdirSync(TEMP_DIR)
     .filter(file => {
       const fullPath = path.join(TEMP_DIR, file);
       if (fs.statSync(fullPath).isDirectory()) {
@@ -46,26 +46,15 @@ async function doInspect() {
     .map(file => {
       const fullPath = path.join(TEMP_DIR, file);
       console.log("Parsing %s", fullPath);
-      console.log(parser.parse(fullPath));
       return parser.parse(fullPath)
-    })
-    .reduce((promiseChain, currentTask) => {
-      return promiseChain.then(chainResults =>
-          currentTask.then(currentResult =>
-              [ ...chainResults, currentResult ]
-          )
-      );
-    }, Promise.resolve([]))
-    .forEach(annotations => {
-      console.log(annotations)
-    });
+    }))
+  ;
 }
-
 
 doInspect()
   .then(ff => {
     console.log("Done");
-    process.exit(1)
+    process.exit(0)
   })
   .catch(err => {
     console.log("Oops!");
