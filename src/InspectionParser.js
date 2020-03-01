@@ -4,8 +4,8 @@ const xml = require('xml2js');
 class InspectionParser {
 
   async parse(path) {
-    var data = fs.readFileSync(path, 'utf8');
-    var result = await xml.parseStringPromise(data)
+    let data = fs.readFileSync(path, 'utf8');
+    let result = await xml.parseStringPromise(data);
     return result.problems.problem
       .map(problem => {
         return {
