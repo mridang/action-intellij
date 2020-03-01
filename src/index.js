@@ -15,7 +15,7 @@ const TEMP_DIR = path.join(os.tmpdir(), 'inspect');
 fs.mkdirSync(TEMP_DIR);
 
 const InspectionParser = require('./InspectionParser');
-const DefaultRunner = require('../defaultRunner');
+const DefaultRunner = require('./defaultRunner');
 
 console.log(INSPECTION_XML);
 console.log(process.cwd());
