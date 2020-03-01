@@ -15,6 +15,7 @@ const TEMP_DIR = path.join(os.tmpdir(), 'inspect');
 fs.mkdirSync(TEMP_DIR);
 
 const InspectionParser = require('./InspectionParser');
+const DefaultRunner = require('../defaultRunner');
 
 console.log(INSPECTION_XML);
 console.log(process.cwd());
@@ -25,30 +26,11 @@ if (!fs.existsSync(INSPECTION_XML)) {
 
 async function doInspect() {
   console.log("Running the IDEA inspector");
-
   await exec.exec("/home/ijinspector/idea-IC/bin/inspect.sh", [GITHUB_WORKSPACE, INSPECTION_XML, TEMP_DIR, FLAG_OUTPUT_DIR, GITHUB_WORKSPACE, FLAG_VERBOSITY_LEVEL]);
-
   console.log("Finished inspecting code");
   const parser = new InspectionParser();
-  return await Promise.all(fs.readdirSync(TEMP_DIR)
-    .filter(file => {
-      const fullPath = path.join(TEMP_DIR, file);
-      if (fs.statSync(fullPath).isDirectory()) {
-        console.debug("Skipping directory %s", fullPath);
-        return false;
-      } else if (file.startsWith('.')) {
-        console.debug("Skipping dotfile %s", fullPath);
-        return false;
-      } else {
-        return true;
-      }
-    })
-    .map(file => {
-      const fullPath = path.join(TEMP_DIR, file);
-      console.log("Parsing %s", fullPath);
-      return parser.parse(fullPath)
-    }))
-  ;
+  const runner = new DefaultRunner(TEMP_DIR, parser);
+  return runner.run()
 }
 
 doInspect()
