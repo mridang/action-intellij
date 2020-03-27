@@ -33,6 +33,21 @@ async function doInspect() {
   return runner.run()
 }
 
+
+async function createCheck() {
+  octokit.checks.create({,
+    name: "IntelliJ Inspect",
+    head_sha: GITHUB_SHA,
+    status: 'in_progress',
+    started_at: new Date()
+  })
+}
+
+createCheck()
+  .then(response => {
+    console.log(response)
+  });
+
 doInspect()
   .then(annotations => {
     console.log(annotations);
