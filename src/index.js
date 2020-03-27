@@ -52,7 +52,7 @@ octokit.checks.create({
 
       octokit.checks.update({
         ...github.context.repo,
-        check_run_id: data.id,
+        check_run_id: response.data.id,
         completed_at: new Date().toISOString(),
         conclusion: "success",
         output:
