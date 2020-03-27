@@ -37,7 +37,15 @@ async function doInspect() {
 
 
 const githubClient = new github.GitHub(GITHUB_TOKEN);
-console.log(github.context.repo)
+github.checks.create({
+  ...github.context.repo,
+  name: github.context.action,
+  head_sha: github.context.sha,
+  started_at: new Date().toISOString()
+})
+.then(response => {
+  console.log(response)
+})
 
 
 doInspect()
