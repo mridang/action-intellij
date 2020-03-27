@@ -35,22 +35,35 @@ async function doInspect() {
 
 
 const octokit = new github.GitHub(core.getInput("myToken", { required: true }));
-octokit.checks.create({
+const {data} = octokit.checks.create({
   ...github.context.repo,
   name: github.context.action,
   head_sha: github.context.sha,
   started_at: new Date().toISOString()
 })
-.then(response => {
-  console.log(response)
-})
-
 
 doInspect()
   .then(annotations => {
     console.log(annotations);
     console.log("Done");
-    process.exit(0)
+
+    await octokit.checks.update({
+      ...github.context.repo,
+      check_run_id: data.id,
+      completed_at: new Date().toISOString(),
+      conclusion: "success",
+      output:
+      {
+        summary: "summary",
+        title: "title",
+        annotations: annotations
+      },
+      status: "completed",
+    })
+    .then(response => {
+      console.log(response)
+      process.exit(0)
+    })
   })
   .catch(err => {
     console.log("Oops!");
