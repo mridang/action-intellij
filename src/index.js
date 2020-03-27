@@ -17,7 +17,7 @@ fs.mkdirSync(TEMP_DIR);
 const InspectionParser = require('./InspectionParser');
 const DefaultRunner = require('./defaultRunner');
 
-const octokit = new github.GitHub(GITHUB_TOKEN);
+const octokit = new github.GitHub(GITHUB_TOKEN, { required: true });
 
 console.log(INSPECTION_XML);
 console.log(process.cwd());
@@ -36,19 +36,15 @@ async function doInspect() {
 }
 
 
-async function createCheck() {
-  octokit.checks.create({
-    name: "IntelliJ Inspect",
-    head_sha: GITHUB_SHA,
-    status: 'in_progress',
-    started_at: new Date()
-  })
-}
+const githubClient = new github.GitHub(GITHUB_TOKEN);
+const { data } = await githubClient.checks.create({
+  ...github.context.repo,
+  name: github.context.action,
+  head_sha: github.context.sha,
+  started_at: new Date().toISOString(),
+});
+console.log(JSON.stringify(data));
 
-createCheck()
-  .then(response => {
-    console.log(response)
-  });
 
 doInspect()
   .then(annotations => {
