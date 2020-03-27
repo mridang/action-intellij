@@ -17,8 +17,6 @@ fs.mkdirSync(TEMP_DIR);
 const InspectionParser = require('./InspectionParser');
 const DefaultRunner = require('./defaultRunner');
 
-const octokit = new github.GitHub(GITHUB_TOKEN, { required: true });
-
 console.log(INSPECTION_XML);
 console.log(process.cwd());
 if (!fs.existsSync(INSPECTION_XML)) {
@@ -36,8 +34,8 @@ async function doInspect() {
 }
 
 
-const githubClient = new github.GitHub(GITHUB_TOKEN);
-github.checks.create({
+const octokit = new github.GitHub(GITHUB_TOKEN);
+octokit.checks.create({
   ...github.context.repo,
   name: github.context.action,
   head_sha: github.context.sha,
