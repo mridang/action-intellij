@@ -37,13 +37,13 @@ async function doInspect() {
 
 
 const githubClient = new github.GitHub(GITHUB_TOKEN);
-const { data } = await githubClient.checks.create({
+const response = await github.checks.create({
   ...github.context.repo,
   name: github.context.action,
   head_sha: github.context.sha,
   started_at: new Date().toISOString(),
 });
-console.log(JSON.stringify(data));
+console.log(JSON.stringify(response));
 
 
 doInspect()
