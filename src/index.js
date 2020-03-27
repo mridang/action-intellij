@@ -33,40 +33,44 @@ async function doInspect() {
   return runner.run()
 }
 
-
 const octokit = new github.GitHub(core.getInput("myToken", { required: true }));
-const {data} = await octokit.checks.create({
+
+octokit.checks.create({
   ...github.context.repo,
   name: github.context.action,
   head_sha: github.context.sha,
   started_at: new Date().toISOString()
 })
+.then(response => {
+  console.log(response);
+  console.log("Done");
 
-doInspect()
-  .then(annotations => {
-    console.log(annotations);
-    console.log("Done");
+  doInspect()
+    .then(annotations => {
+      console.log(annotations);
+      console.log("Done");
 
-    octokit.checks.update({
-      ...github.context.repo,
-      check_run_id: data.id,
-      completed_at: new Date().toISOString(),
-      conclusion: "success",
-      output:
-      {
-        summary: "summary",
-        title: "title",
-        annotations: annotations
-      },
-      status: "completed"
+      octokit.checks.update({
+        ...github.context.repo,
+        check_run_id: data.id,
+        completed_at: new Date().toISOString(),
+        conclusion: "success",
+        output:
+        {
+          summary: "summary",
+          title: "title",
+          annotations: annotations
+        },
+        status: "completed"
+      })
+      .then(response => {
+        console.log(response)
+        process.exit(0)
+      })
     })
-    .then(response => {
-      console.log(response)
-      process.exit(0)
-    })
-  })
-  .catch(err => {
-    console.log("Oops!");
-    console.log(err);
-    process.exit(1)
-  });
+    .catch(err => {
+      console.log("Oops!");
+      console.log(err);
+      process.exit(1)
+    });
+})
