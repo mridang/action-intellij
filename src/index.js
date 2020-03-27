@@ -17,6 +17,8 @@ fs.mkdirSync(TEMP_DIR);
 const InspectionParser = require('./InspectionParser');
 const DefaultRunner = require('./defaultRunner');
 
+const octokit = new github.GitHub(GITHUB_TOKEN);
+
 console.log(INSPECTION_XML);
 console.log(process.cwd());
 if (!fs.existsSync(INSPECTION_XML)) {
