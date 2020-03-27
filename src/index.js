@@ -48,17 +48,7 @@ doInspect()
     console.log("Done");
 
     await octokit.checks.update({
-      ...github.context.repo,
-      check_run_id: data.id,
-      completed_at: new Date().toISOString(),
-      conclusion: "success",
-      output:
-      {
-        summary: "summary",
-        title: "title",
-        annotations: annotations
-      },
-      status: "completed"
+      ...github.context.repo
     })
     .then(response => {
       console.log(response)
