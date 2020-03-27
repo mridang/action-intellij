@@ -34,7 +34,7 @@ async function doInspect() {
 }
 
 
-const octokit = new github.GitHub(GITHUB_TOKEN);
+const octokit = new github.GitHub(core.getInput("myToken", { required: true }));
 octokit.checks.create({
   ...github.context.repo,
   name: github.context.action,
