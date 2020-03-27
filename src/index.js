@@ -35,7 +35,7 @@ async function doInspect() {
 
 
 async function createCheck() {
-  octokit.checks.create({,
+  octokit.checks.create({
     name: "IntelliJ Inspect",
     head_sha: GITHUB_SHA,
     status: 'in_progress',
