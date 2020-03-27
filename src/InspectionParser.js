@@ -1,5 +1,6 @@
 const fs = require('fs');
 const xml = require('xml2js');
+const prefix = "file://$PROJECT_DIR$/"
 
 class InspectionParser {
 
@@ -9,7 +10,7 @@ class InspectionParser {
     return result.problems.problem
       .map(problem => {
         return {
-          path: problem.file[0],
+          path: problem.file[0].replace(prefix, ""),
           start_line: problem.line[0],
           end_line: problem.line[0],
           annotation_level: "warning",

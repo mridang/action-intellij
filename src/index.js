@@ -42,14 +42,8 @@ octokit.checks.create({
   started_at: new Date().toISOString()
 })
 .then(response => {
-  console.log(response);
-  console.log("Done");
-
   doInspect()
     .then(annotations => {
-      console.log(annotations);
-      console.log("Done");
-
       octokit.checks.update({
         ...github.context.repo,
         check_run_id: response.data.id,
@@ -64,12 +58,10 @@ octokit.checks.create({
         status: "completed"
       })
       .then(response => {
-        console.log(response)
         process.exit(0)
       })
     })
     .catch(err => {
-      console.log("Oops!");
       console.log(err);
       process.exit(1)
     });
