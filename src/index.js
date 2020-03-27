@@ -34,7 +34,8 @@ async function doInspect() {
 }
 
 doInspect()
-  .then(ff => {
+  .then(annotations => {
+    console.log(annotations);
     console.log("Done");
     process.exit(0)
   })
