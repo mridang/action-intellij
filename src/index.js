@@ -58,7 +58,7 @@ doInspect()
         title: "title",
         annotations: annotations
       },
-      status: "completed",
+      status: "completed"
     })
     .then(response => {
       console.log(response)
